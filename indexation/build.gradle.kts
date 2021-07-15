@@ -15,6 +15,7 @@ dependencies {
 
 application {
     mainClass.set("indexation.MainKt")
+    applicationDefaultJvmArgs = listOf("-Xmx8g")
 }
 
 tasks.withType<JavaExec> {

@@ -51,6 +51,8 @@ plugins {
 
 allprojects {
     repositories {
+        maven("https://clojars.org/repo")
+        maven("https://maven.aliyun.com/repository/public/")
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-ide")
         maven("https://kotlin.bintray.com/kotlin-ide-plugin-dependencies")
@@ -72,6 +74,7 @@ allprojects {
 }
 
 dependencies {
+    kotlinDependency(files("./pricing2.jar"))
     kotlinDependency("junit:junit:4.12")
     kotlinDependency("org.hamcrest:hamcrest:2.2")
     kotlinDependency("com.fasterxml.jackson.core:jackson-databind:2.12.1")
